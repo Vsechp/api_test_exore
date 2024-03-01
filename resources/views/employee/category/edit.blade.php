@@ -72,13 +72,11 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="{{ route('manager.category.update', ['category' => $category->id]) }}" method="POST"
-                              class="w-25">
+                        <form action="{{ route('manager.category.update', ['category' => $category->id]) }}" method="POST" class="w-25">
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <input type="text" class="form-control" name="title" placeholder="Category name"
-                                       value="{{$category->title}}">
+                                <input type="text" class="form-control" name="title" placeholder="Category name" value="{{$category->title}}">
                                 @error('title')
                                 <div class="text-danger">This field must be filled up</div>
                                 @enderror

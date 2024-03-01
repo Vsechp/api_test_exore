@@ -164,6 +164,7 @@ class ManagerController extends Controller
 
     public function createCategory()
     {
+        $this->authorize('create', Category::class);
         $categories = Category::all();
         return view('manager.category.create', compact('categories'));
     }
@@ -187,6 +188,7 @@ class ManagerController extends Controller
 
     public function updateCategory(UpdateCategoryRequest $request, Category $category)
     {
+        $this->authorize('update', $category);
         $data = $request->validated();
         $category->update($data);
         return view('manager.category.show', compact('category'));
@@ -194,6 +196,7 @@ class ManagerController extends Controller
 
     public function deleteCategory(Category $category)
     {
+        $this->authorize('delete', $category);
         $category->delete();
         return redirect()->route('manager.category.index');
     }

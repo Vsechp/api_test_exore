@@ -77,8 +77,8 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <input type="text" class="form-control" name="title" placeholder="Category name"
-                                       value="{{$category->title}}">
+                                <input type="text" class="form-control" name="name" placeholder="Category name"
+                                       value="{{$category->name}}">
                                 @error('title')
                                 <div class="text-danger">This field must be filled up</div>
                                 @enderror
