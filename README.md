@@ -8,7 +8,7 @@
 </p>
 
 ## Описание проекта:
-Склониируйте проект в директорию с сервером 
+Склонируйте проект в директорию с сервером 
 
 ```
 git clone https://github.com/Vsechp/api_test_exore
@@ -27,6 +27,11 @@ git clone https://github.com/Vsechp/api_test_exore
 В открытой консоли директории проекта введите команду для генерации таблиц базы данных:
 ```bash
   php artisan migrate
+```
+
+Для запуска сидов в таблице categories используйте команду 
+```bash
+php artisan db:seed --class=CategorySeeder
 ```
 
 В той же консоли для запуска сайта по адресу http://localhost:8000 введите команду:
